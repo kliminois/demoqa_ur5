@@ -28,7 +28,7 @@ public class EnterprizeTest {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
-        $("#column-a").dragAndDropTo("#column-b"); //Перетаскивает блок "A" на блок "B"
+        $("#column-a").dragAndDropTo("#column-b"); //Перетаскивает блок A на блок B
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
     }
@@ -40,7 +40,7 @@ public class EnterprizeTest {
         actions() //Создаёт цепочку действий
                 .moveToElement($("#column-a")) //Перемещает курсор мыши к элементу A
                 .clickAndHold() //Зажимает левую кнопку мыши на элементе A (удерживает его)
-                .moveToElement($("#column-b")) //Перемещает курсор (и "зажатый" элемент A) к элементу B
+                .moveToElement($("#column-b")) //Перемещает курсор (и зажатый элемент A) к элементу B
                 .release() //Отпускает кнопку мыши, "бросая" элемент A на элемент B
                 .perform(); //Выполняет всю цепочку действий
         $("#column-a").shouldHave(text("B"));
