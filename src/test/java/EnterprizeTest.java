@@ -46,5 +46,4 @@ public class EnterprizeTest {
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
     }
-
 }
